@@ -89,14 +89,10 @@ header img{height:38px;filter:brightness(0) invert(1);object-fit:contain}
 .hero-line::after{content:"";position:absolute;top:-10%;left:75%;width:1px;height:120%;background:linear-gradient(to bottom,transparent,rgba(6,182,212,0.15),transparent);transform:rotate(15deg)}
 .hero-content{position:relative;z-index:2}
 
-.hero-eye{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
-  margin-bottom:18px;
-}
-.hero-eye-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:4px 12px;border-radius:30px}
-.hero-eye-pill2{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:4px 12px;border-radius:30px}
-  .hero-eye-pill3{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:4px 12px;border-radius:30px}
+
+
+
+  
 
 /* TÍTULO — Rubik 900 sólido, sin Dirt */
 .hero-title{
@@ -127,7 +123,7 @@ header img{height:38px;filter:brightness(0) invert(1);object-fit:contain}
   display:flex;align-items:center;gap:18px;
   padding-top:14px;border-top:1px solid rgba(255,255,255,0.07);
 }
-.price-side{font-size:15px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.8;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding-left:16px;border-left:1px solid rgba(255,255,255,0.08);}
+.price-side{font-size:15px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.8;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-left:16px;border-left:1px solid rgba(255,255,255,0.08);}
 .price-side strong{background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
 
 /* STATS */
@@ -143,7 +139,7 @@ header img{height:38px;filter:brightness(0) invert(1);object-fit:contain}
 /* SECCIÓN */
 section{padding:36px 24px}
 .sec-label{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.sec-label::after{content:"";flex:1;height:1px;background:var(--border)}
+.sec-label::after{content:"";height:1px;background:var(--border)}
 .sec-heading{font-family:"Rubik",sans-serif;font-size:32px;font-weight:800;color:var(--white);line-height:1.15;margin-bottom:18px;letter-spacing:-0.5px}
 
 /* INCLUDES */
@@ -191,7 +187,7 @@ section{padding:36px 24px}
 .f-input{
   width:100%;padding:14px 18px;
   background:rgba(255,255,255,0.04);border:1.5px solid rgba(255,255,255,0.09);
-  border-radius:10px;font-size:15px;font-family:"Rubik",sans-serif;font-weight:400;
+  border-radius:30px;font-size:15px;font-family:"Rubik",sans-serif;font-weight:400;
   color:var(--white);outline:none;transition:border-color .2s,background .2s;
 }
 .f-input::placeholder{color:rgba(255,255,255,0.20)}
@@ -204,7 +200,7 @@ section{padding:36px 24px}
 .og.c1{grid-template-columns:1fr}
 .oc{
   background:rgba(255,255,255,0.03);border:1.5px solid rgba(255,255,255,0.07);
-  border-radius:10px;padding:13px 15px;cursor:pointer;
+  border-radius:30px;padding:13px 15px;cursor:pointer;
   display:flex;align-items:center;gap:10px;transition:all .18s;user-select:none;
 }
 .oc:hover{border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.07)}
@@ -212,7 +208,7 @@ section{padding:36px 24px}
 .or{width:18px;height:18px;border:2px solid rgba(255,255,255,0.18);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s}
 .oc.sel .or{border-color:var(--violet-mid);background:linear-gradient(135deg,var(--violet),var(--cyan))}
 .oc.sel .or::after{content:"";width:6px;height:6px;background:#fff;border-radius:50%;display:block}
-.ot{font-size:13px;font-weight:500;color:rgba(255,255,255,0.82);flex:1;line-height:1.35}
+.ot{font-size:13px;font-weight:500;color:rgba(255,255,255,0.82);line-height:1.35}
 .ot small{display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,0.35);margin-top:1px}
 
 #no-cal{display:none;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;text-align:center;margin-top:8px}
@@ -319,7 +315,7 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20);letter-spacing:.5px}
     font-size:52px;font-weight:700;
     color:#fff;line-height:1;letter-spacing:2px;
   }
-  .price-side{font-size:15px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.8;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding-left:16px;border-left:1px solid rgba(255,255,255,0.08);}
+  .price-side{font-size:15px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.8;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-left:16px;border-left:1px solid rgba(255,255,255,0.08);}
   .price-side strong{
     background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));
     -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -389,12 +385,21 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20);letter-spacing:.5px}
 
   @media(max-width:390px){
     .live-badge{font-size:13px;font-weight:700;letter-spacing:1px;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;display:flex;align-items:center;gap:6px;text-align:left;line-height:1.35}
-    .hero-eye{flex-wrap:wrap;gap:5px}
-    .hero-eye-pill,.hero-eye-pill2,.hero-eye-pill3{font-size:8px;padding:3px 8px}
+    
+    
     .hero-title{font-size:clamp(34px,9vw,48px)}
     .hpill{font-size:10px;padding:5px 10px}
     .hero-pills{gap:6px}
   }
+
+
+  
+
+
+  .hero-eye{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px;flex-wrap:wrap;}
+  .hero-eye-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:5px 12px;border-radius:30px;font-size:10px;letter-spacing:2px;white-space:nowrap;}
+  .hero-eye-pill2{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:5px 12px;border-radius:30px;font-size:10px;letter-spacing:2px;white-space:nowrap;}
+  .hero-eye-pill3{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:5px 12px;border-radius:30px;font-size:10px;letter-spacing:2px;white-space:nowrap;}
 
 </style>
 </head>
