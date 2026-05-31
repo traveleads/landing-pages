@@ -52,7 +52,7 @@ header img.logo{height:44px;object-fit:contain;flex-shrink:0;mix-blend-mode:scre
 .hero-title{font-family:"Rubik",sans-serif;font-size:clamp(34px,9.5vw,50px);font-weight:900;line-height:1.06;letter-spacing:-1px;color:var(--white);margin-bottom:14px}
 .hero-title .grad{background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-.hero-sub{font-size:16px;font-weight:400;color:rgba(255,255,255,0.58);line-height:1.65;margin-bottom:16px}
+.hero-sub{font-size:18px;font-weight:400;color:rgba(255,255,255,0.58);line-height:1.65;margin-bottom:16px}
 
 /* PAIN ITEMS */
 .pain-list{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;margin-top:20px}
@@ -63,7 +63,7 @@ header img.logo{height:44px;object-fit:contain;flex-shrink:0;mix-blend-mode:scre
 
 /* COMO FUNCIONA */
 .how-section{background:var(--card);padding:36px 24px}
-.sec-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .sec-label::after{content:"";flex:1;height:1px;background:var(--border)}
 .sec-heading{font-family:"Rubik",sans-serif;font-size:24px;font-weight:800;color:var(--white);line-height:1.2;margin-bottom:20px;letter-spacing:-0.3px}
 
@@ -73,7 +73,7 @@ header img.logo{height:44px;object-fit:contain;flex-shrink:0;mix-blend-mode:scre
 .step-num{width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:#fff;flex-shrink:0;margin-top:2px}
 .step-body{}
 .step-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
-.step-desc{font-size:13px;font-weight:400;color:rgba(255,255,255,0.52);line-height:1.55}
+.step-desc{font-size:15px;font-weight:400;color:rgba(255,255,255,0.52);line-height:1.55}
 
 /* DIFERENCIADORES */
 .diff-section{background:var(--ink);border-top:1px solid var(--border);padding:36px 24px}
@@ -87,7 +87,7 @@ header img.logo{height:44px;object-fit:contain;flex-shrink:0;mix-blend-mode:scre
 .urg-icon{animation:floatY 2.5s ease-in-out infinite;flex-shrink:0}
 .urg-icon svg{width:22px;height:22px;stroke:var(--violet-light);fill:none;stroke-width:1.8}
 .urg-text{font-size:13px;font-weight:700;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.4}
-.urg-sub{font-size:12px;font-weight:600;margin-top:2px;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent}
+.urg-sub{font-size:13px;font-weight:700;margin-top:2px;background:linear-gradient(90deg,var(--violet-light),var(--cyan-light));-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* FORM */
 .form-section{background:var(--card);border-top:1px solid var(--border);padding:28px 24px 80px}
@@ -164,7 +164,7 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20)}
   <div class="hero-bg"></div>
   <div class="hero-dots"></div>
   <div class="hero-content">
-    <h1 class="hero-title a2">
+    <h1 class="hero-title a2" id="hero-titulo">
       Vend&eacute; m&aacute;s<br>paquetes<br>
       <span class="grad">tur&iacute;sticos</span>
     </h1>
@@ -228,8 +228,8 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20)}
 <div class="urgency" id="urgency-bar">
   <div class="urg-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
   <div>
-    <div class="urg-text">Agendar una asesor&iacute;a gratuita solo toma segundos</div>
-    <div class="urg-sub">Esperar no es una estrategia</div>
+    <div class="urg-text">Agendar una asesor&iacute;a gratuita</div>
+    <div class="urg-sub">solo toma segundos</div>
   </div>
 </div>
   <div>
@@ -331,6 +331,18 @@ function enviar(){
   btnW.href=url;btnW.style.display="flex";
   setTimeout(function(){btnW.scrollIntoView({behavior:"smooth",block:"center"});window.open(url,"_blank")},120);
 }
+
+
+var heroAngulos = [
+  'Dej&aacute; de depender<br>de la <span class="grad">temporada</span>',
+  'Dej&aacute; de depender<br>del <span class="grad">boca a boca</span>',
+  '&iquest;Invert&iacute;s en publicidad<br>y solo atend&eacute;s <span class="grad">curiosos?</span>'
+];
+
+(function(){
+  var el = document.getElementById('hero-titulo');
+  if(el) el.innerHTML = heroAngulos[Math.floor(Math.random() * heroAngulos.length)];
+})();
 
 // Angulos de la seccion comparativa
 var diffAngulos = [
