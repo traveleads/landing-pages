@@ -210,7 +210,7 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20)}
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <div class="step-title">Atend&eacute;, cotiz&aacute; y cerr&aacute; ventas</div>
+        <div class="step-title">Atiende, cotiza y cierra ventas</div>
         <div class="step-desc">El sistema aprende de ventas reales y le ense&ntilde;a a Meta a atraer perfiles como esos.</div>
       </div>
     </div>
@@ -342,6 +342,16 @@ var heroAngulos = [
 (function(){
   var el = document.getElementById('hero-titulo');
   if(el) el.innerHTML = heroAngulos[Math.floor(Math.random() * heroAngulos.length)];
+})();
+
+
+var btnAngulos = [
+  'Quiero consultas<br>de calidad',
+  'Quiero aplicar<br>este sistema'
+];
+(function(){
+  var el = document.getElementById('btn-texto');
+  if(el) el.innerHTML = btnAngulos[Math.floor(Math.random() * btnAngulos.length)];
 })();
 
 // Angulos de la seccion comparativa
