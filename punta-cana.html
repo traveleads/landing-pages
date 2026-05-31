@@ -661,6 +661,52 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20);letter-spacing:.5px}
 </div>
 
 <script>
+/* ── ANGULOS DINAMICOS ── */
+var angulos = [
+  {
+    titulo: '<span class="grad-text">Descans\u00e1.</span><br>Nosotros nos<br>ocupamos del resto',
+    subtitulo: 'Todo organizado para que disfrut\u00e9s<br>el Caribe sin preocuparte por nada.',
+    seclabel: 'Tu relax con todo incluido',
+    descripcion: '<p>Durante una semana te olvidás de horarios, decisiones y preocupaciones. Llegás a Punta Cana, hacés el check-in y el resto ya está resuelto: vuelo, traslados, hotel All Inclusive, comidas, bebidas y playa frente al mar. Elegí entre Iberostar, Riu o Whalá Bávaro y disfrutá 7 noches en algunos de los resorts más reconocidos del Caribe. Tu única tarea es descansar.</p><p>Las tarifas para enero suelen aumentar a medida que se acerca la fecha. Si todavía hay lugar disponible, completá el formulario y un asesor te contactará para ayudarte a asegurar el precio actual.</p>'
+  },
+  {
+    titulo: 'El viaje que<br>te deb\u00e9s<br><span class="grad-text">hace a\u00f1os</span>',
+    subtitulo: 'Hac\u00e9 realidad ese viaje al Caribe que ven\u00eds postergando',
+    seclabel: 'El viaje que la mayor\u00eda posterga',
+    descripcion: '<p>Mientras muchos siguen diciendo "algún día", vos podés estar caminando por playas de arena blanca, disfrutando un resort All Inclusive y despertándote frente al Caribe. Punta Cana no es un gasto más: es una experiencia que vas a recordar durante años. Por eso miles de viajeros la eligen como su primer gran viaje internacional.</p><p>Hoy todavía podés acceder a esta salida con financiación y precio vigente. Completá el formulario y verificá si todavía quedan lugares disponibles para la fecha que estás viendo.</p>'
+  }
+];
+
+var frasesBanner = [
+  "Las mejores tarifas suelen agotarse antes.",
+  "Solicitar tu cotizaci\u00f3n lleva segundos.",
+  "La disponibilidad cambia todos los d\u00edas."
+];
+var seed = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+var nums = [12,13,14,15,16,17,18,19,20,21];
+var n = nums[seed % nums.length];
+frasesBanner.push(n + " personas cotizaron este viaje recientemente.");
+
+(function(){
+  var a = angulos[Math.floor(Math.random() * angulos.length)];
+  var tituloEl = document.getElementById("hero-titulo");
+  if(tituloEl) tituloEl.innerHTML = a.titulo;
+  var subEl = document.querySelector(".hero-subtitle");
+  if(subEl) subEl.innerHTML = a.subtitulo;
+  var urgEl = document.querySelector(".urg-text");
+  if(urgEl) urgEl.textContent = frasesBanner[seed % frasesBanner.length];
+  var descEl = document.getElementById("desc-section");
+  if(descEl){
+    var lbl = descEl.querySelector(".sec-label");
+    if(lbl) lbl.textContent = a.seclabel;
+    var ps = descEl.querySelectorAll("p");
+    ps.forEach(function(p){ p.remove(); });
+    var tmp = document.createElement("div");
+    tmp.innerHTML = a.descripcion;
+    tmp.querySelectorAll("p").forEach(function(p){ descEl.appendChild(p); });
+  }
+})();
+
 var vals={personas:null,fecha:null,budget:null};
 function pick(g,card,val){
   document.querySelectorAll("#"+g+" .oc").forEach(function(c){c.classList.remove("sel")});
