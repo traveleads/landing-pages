@@ -93,7 +93,7 @@ header img.logo{height:44px;object-fit:contain;flex-shrink:0;mix-blend-mode:scre
 .form-section{background:var(--card);border-top:1px solid var(--border);padding:28px 24px 80px}
 .form-intro{font-size:14px;font-weight:400;color:rgba(255,255,255,0.48);line-height:1.65;margin-bottom:26px}
 .f-row{margin-bottom:16px}
-.f-label{display:block;font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;line-height:1.7}
+.f-label{display:block;font-size:14px;font-weight:500;color:rgba(255,255,255,0.82);text-transform:none;letter-spacing:0;margin-bottom:8px;line-height:1.6}
 .f-input{width:100%;padding:14px 18px;background:rgba(255,255,255,0.04);border:1.5px solid rgba(255,255,255,0.09);border-radius:10px;font-size:15px;font-family:"Rubik",sans-serif;color:var(--white);outline:none;transition:border-color .2s}
 .f-input::placeholder{color:rgba(255,255,255,0.20)}
 .f-input:focus{border-color:var(--violet-mid);background:rgba(124,58,237,0.07)}
@@ -247,16 +247,16 @@ footer p{font-size:11px;color:rgba(255,255,255,0.20)}
   <div class="f-row"><label class="f-label">Nombre</label><input class="f-input" type="text" id="f-nombre" placeholder="Tu nombre"></div>
   <div class="f-row"><label class="f-label">Email</label><input class="f-input" type="email" id="f-email" placeholder="tucorreo@email.com"></div>
   <div class="f-row"><label class="f-label">WhatsApp</label><input class="f-input" type="tel" id="f-wsp" placeholder="+54 9 11 1234 5678"></div>
-  <div class="f-row"><label class="f-label">Nombre de tu agencia</label><input class="f-input" type="text" id="f-agencia" placeholder="Nombre de tu agencia de viajes"></div>
+  <div class="f-row"><label class="f-label">Instagram de tu agencia</label><input class="f-input" type="text" id="f-agencia" placeholder="@tuagencia"></div>
 
   <div class="f-divider"></div>
 
   <div class="f-row">
     <label class="f-label">Cu&aacute;ntos vendedores ten&eacute;s</label>
     <div class="og c1" id="g-vendedores">
-      <div class="oc" onclick="pick('g-vendedores',this,'Solo yo (1 vendedor)')"><div class="or"></div><div class="ot">Solo yo<small>1 vendedor</small></div></div>
-      <div class="oc" onclick="pick('g-vendedores',this,'2 a 5 vendedores')"><div class="or"></div><div class="ot">Equipo chico<small>2 a 5 vendedores</small></div></div>
-      <div class="oc" onclick="pick('g-vendedores',this,'6 o mas vendedores')"><div class="or"></div><div class="ot">Equipo grande<small>6 o m&aacute;s vendedores</small></div></div>
+      <div class="oc" onclick="pick('g-vendedores',this,'Solo yo (1 vendedor)')"><div class="or"></div><div class="ot">Solo yo (1 vendedor)</div></div>
+      <div class="oc" onclick="pick('g-vendedores',this,'2 a 5 vendedores')"><div class="or"></div><div class="ot">Equipo chico (2 a 5 vendedores)</div></div>
+      <div class="oc" onclick="pick('g-vendedores',this,'6 o mas vendedores')"><div class="or"></div><div class="ot">Equipo grande (6 o m&aacute;s vendedores)</div></div>
     </div>
   </div>
 
@@ -318,7 +318,7 @@ function enviar(){
   if(!vals.meta){alert("Selecciona tu experiencia con Meta Ads.");return}
   if(!vals.inversion){alert("Seleccion\u00e1 una inversi\u00f3n congruente.");return}
   var msg="Hola Matias! Me interesa conocer el sistema Funnelab para mi agencia."
-    +" Soy "+nombre+" de "+agencia+"."
+    +" Soy "+nombre+". Instagram: "+agencia+"."
     +" Tenemos "+vals.vendedores+"."
     +" Publicidad en Meta: "+vals.meta+". Inversi\u00f3n congruente: "+vals.inversion+"."
     +" Estoy listo para invertir."
